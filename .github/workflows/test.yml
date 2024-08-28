@@ -28,6 +28,5 @@ jobs:
         if: success() 
         run: |
           git checkout main
-          git rm -r back/
-          git commit -m "Remove test folder before merging"
+          git commit -m "перенос кода"
           git push origin main
