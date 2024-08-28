@@ -1,0 +1,9 @@
+{
+  "description": "",
+  "scripts": {
+    "test": "jest .js-agens/js-example-agent/tests"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
