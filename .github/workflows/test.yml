@@ -28,5 +28,6 @@ jobs:
         if: success() 
         run: |
           git checkout main
+          git add .
           git commit -m "перенос кода"
           git push origin main
