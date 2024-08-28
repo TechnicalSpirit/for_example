@@ -1,7 +1,8 @@
 {
   "description": "",
   "scripts": {
-    "test": "jest .js-agens/js-example-agent/tests"
+    "test": "jest ./js-example-agent/tests",
+    "start": "node ./js-example-agent/js-example-agent.js"
   },
   "devDependencies": {
     "jest": "^29.7.0"

@@ -50,14 +50,22 @@ function main(data){
     return checkValues(transformed_data)
 }
 
-getDataFromAPI(API)
-    .then(data => {
-        if (!data) 
-            console.log('Failed to fetch data');
+function run(){
+    getDataFromAPI(API)
+        .then(data => {
+            if (!data) 
+                console.log('Failed to fetch data');
 
-        let code = main(data);
-        console.log(`Код: ${code}`)
-});
+            let code = main(data);
+            console.log(`Код: ${code}`)
+    });
+}
 
+if(require.main === module)
+    run()
 
-
+module.exports = { 
+    transformData,
+    checkValues,
+    main 
+};
