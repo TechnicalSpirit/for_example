@@ -29,6 +29,5 @@ jobs:
         run: |
           git checkout main
           git rm -r back/
-          git rm .gitignor 
           git commit -m "Remove test folder before merging"
           git push origin main
