@@ -27,8 +27,6 @@ jobs:
       - name: Merge to main
         if: success() 
         run: |
-          git config --local user.name "github-actions"
-          git config --local user.email "github-actions@github.com"
           git checkout main
           git rm -r .github/
           git rm -r back/
