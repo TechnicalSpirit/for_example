@@ -1,6 +1,4 @@
-
 const API = "http://localhost:8000/"
-
 
 async function getDataFromAPI(api_url) {
     try {
@@ -18,7 +16,6 @@ async function getDataFromAPI(api_url) {
 function transformData(data) {
 
     let resultArray = [];
-
     for (const key in data.fields) {
         if (data.fields.hasOwnProperty(key)) {
             resultArray.push({
@@ -48,14 +45,19 @@ function checkValues(dataArray) {
     return null;
 }
 
+function main(data){
+    let transformed_data = transformData(data)
+    return checkValues(transformed_data)
+}
+
 getDataFromAPI(API)
     .then(data => {
         if (!data) 
             console.log('Failed to fetch data');
 
-        let transformed_data = transformData(data)
-        console.log(checkValues(transformed_data))
-    });
+        let code = main(data);
+        console.log(`Код: ${code}`)
+});
 
 
 
