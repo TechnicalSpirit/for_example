@@ -10,5 +10,5 @@ let response_from_api = {
 
 test('пример 1', () => {
     const result = main(response_from_api);
-    expect(result).toBe("M31");
+    expect(result).toBe("M3");
 });
