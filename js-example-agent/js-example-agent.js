@@ -38,6 +38,7 @@ function checkValues(dataArray) {
     const { testKey1Value, testKey2Value, testKey3Value } = values;
 
     if (testKey1Value === 'val_1' && testKey2Value === 'val_2') return "M1";
+    if (testKey1Value === 'val_12') return "M3";
     if (testKey1Value === 'val_1') return "A1";
     if (testKey2Value === 'val_2') return "V1";
     if (testKey3Value === 'val_3') return "G1";

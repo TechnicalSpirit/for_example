@@ -25,13 +25,13 @@ jobs:
         run: npm test
 
       # горе 
-      - name: Merge to main
-        if: success() 
-        run: |
-          git checkout main || git checkout -b main
-          git rm -r .github/
-          git rm -r back/
-          git rm .gitignore
-          git commit -m "Удаляем лишние файлы"
-          git push origin main
+      # - name: Merge to main
+      #   if: success() 
+      #   run: |
+      #     git checkout main || git checkout -b main
+      #     git rm -r .github/
+      #     git rm -r back/
+      #     git rm .gitignore
+      #     git commit -m "Удаляем лишние файлы"
+      #     git push origin main
       # конец горя 
